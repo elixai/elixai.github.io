@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Julian Gottlieb: CSS / HTML / Javascript Expert</title>
+	<meta name="description" content="For Hire: CSS / HTML / Javascript Expert" />
+	<meta name="keywords" content="css expert, cascading style sheet programmer, javascript, javascripter, html5, html 5, frontend designer, frontend developer, web designer" />
+	<meta name="author" content="Julian Gottlieb" />
+	
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+	<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	
+	<!-- SVG Sprite -->
+	<div style="height: 0; width: 0; position: absolute; visibility: hidden;" aria-hidden="true">
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+			<symbol id="ripply-scott" viewBox="0 0 100 100">
+				<circle id="ripple-shape" cx="1" cy="1" r="1" />
+			</symbol>
+		</svg>
+	</div>
+	<!-- /end sprite -->
+	<!-- / Container -->
+	<div class="container">
+		<div id="js-content" class="content">
+			<!-- Photo by Goran Ivos on Unsplash -->
+			<canvas id="js-content__canvas"></canvas>
+			<div class="content__booyah">
+				<h1>Julian Gottlieb</h1>
+				<h2>UI / CSS&nbsp;/ HTML&nbsp;/<br> Javascript</h2>
+				<button id="js-ripple-btn" class="button styl-material">
+					Hire Me!
+					<svg class="ripple-obj" id="js-ripple">
+						<use height="100" width="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+					</svg>
+				</button>
+				<a href="./juliangottlieb-resume_2019.pdf" title="Julian Gottlieb resume" class="booyah--resume" target="_blank">Download my resume</a>
+			</div>
+		</div>
+	</div>
+	<!-- /end container -->
+
+	<!-- / Modal form -->
+	<div id="open-modal" class="modal-window">
+		<div id="js-modal__panel" class="animated">
+			<a href="#modal-close" title="Close" class="modal-close" id="js-modal-close">Close</a>
+			<h2>I'd like to hire you for:</h2>
+			<div>
+				<form method="POST" action="https://formspree.io/hello@juliangottlieb.com">
+					<label>
+						<input type="checkbox" name="ui-work" placeholder="ui design work"> UI Design
+					</label><br>
+					<label>
+						<input type="checkbox" name="css-work" placeholder="css work"> CSS
+					</label><br>
+					<label>
+						<input type="checkbox" name="html-work" placeholder="html work"> HTML
+					</label><br>
+					<label>
+						<input type="checkbox" name="javascript-work" placeholder="javascript work"> Javascript
+					</label>
+					<input type="email" name="email" placeholder="Your email">
+					<button id="js-modal-email" class="animated" type="submit">Send</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- /end modal form -->
+
+	<script src="js/main.min.js"></script>
+
+</body>
+</html>
