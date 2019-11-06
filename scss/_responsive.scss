@@ -1,0 +1,58 @@
+@media (max-width: 600px) {
+	.content {
+		.content__booyah {
+			width: 100%;
+			padding: 0 2rem;
+
+			h1 {
+				font-size: 220%;
+			}
+
+			h2 {
+				font-size: 250%;
+				margin-top: 1rem;
+			}
+
+			button {
+				font-size: 140%;
+			}
+		}
+	}
+}
+
+@media (max-width: 530px) {
+	.content {
+		.content__booyah {
+
+			h2 {
+				font-size: 220%;
+			}
+		}
+	}
+
+	.modal-window {
+
+		> div {
+			top: 160px;
+			width: 350px;
+		}
+	}
+}
+
+@media (max-width: 440px) {
+	.content {
+		.content__booyah {
+
+			h2 {
+				font-size: 180%;
+			}
+		}
+	}
+
+	.modal-window {
+
+		> div {
+			top: 130px;
+		}
+	}
+}

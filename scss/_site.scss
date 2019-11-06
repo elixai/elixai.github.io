@@ -1,0 +1,208 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	background: #fff;
+	color: #383a3c;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.25;
+	font-family: 'Raleway', Calibri, Arial, sans-serif;
+}
+
+a, button {
+	outline: none;
+}
+
+a {
+	color: #566473;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #34495e;
+}
+
+section {
+	padding: 1em;
+	text-align: center;
+}
+
+p.ref {
+	text-align: center;
+	padding: 2em 1em;
+}
+
+
+
+.content {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	background-image: url('../img/unsplash-photo.jpg');
+	background-position: center bottom;
+	z-index: 1;
+
+	canvas {
+		animation: color-me-bg 15s infinite;
+	}
+
+	.content__booyah {
+		margin: 0;
+		padding: 0;
+		color: #f9f1e9;
+		text-align: center;
+		width: 600px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%,-50%,0);
+
+		h1 {	
+			//font-family: 'Clicker Script', cursive;
+			//font-family: Londrina Outline, sans-serif;
+			font-family: Raleway, sans-serif;
+			font-weight: bold;
+			font-size: 3.5em;
+			letter-spacing: 0.1em;
+			padding: 0;
+			margin: 0;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+		}
+
+		h2 {
+			font-family: Londrina Outline, sans-serif;
+			font-family: 'Baloo Bhaijaan', cursive;
+			font-family: 'Archivo Black', sans-serif;
+			text-transform: uppercase;
+			font-size: 3.2em;
+			letter-spacing: 0.1em;
+			padding: 10px 20px;
+			margin-top: 1.5rem;
+			border: 10px double #f9f1e9;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+			background-color: transparent;
+		}
+
+		/* Ripple */
+		button {
+			appearance: none;
+			border: none;
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15), 0 3px 2px -2px rgba(0, 0, 0, 0.2);
+			font-weight: bold;
+			color: #fff;
+			font-size: 2em;
+			text-shadow: 0 -0.5px 1px rgba(0, 0, 0, 0.15);
+			letter-spacing: 0.05em;
+			position: relative;
+
+			&.button {
+				padding: 1em 2em;
+				margin: 0 0 20px 0;
+				width: 100%;
+				display: inline-block;
+			}
+
+			&.styl-material {
+				transition: 200ms background cubic-bezier(0.4, 0, 0.2, 1);
+				animation: color-me-in 15s infinite;
+
+				&:hover, 
+				&:focus {
+					outline: none;
+				}
+			}
+
+			.ripple-obj {
+				height: 100%;
+				pointer-events: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 0;
+				width: 100%;
+				fill: rgba(255,255,255,0.35);
+
+				use {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	.booyah--resume {
+		color: #fff;
+		font-size: 80%;
+	}
+}
+
+
+
+@keyframes color-me-in {
+  0% {
+    background: rgb(66,152,103);
+  }
+  25% {
+    background: rgb(250,178,67);
+  }
+  45% {
+    background: rgb(43,81,102);
+  }
+  65% {
+    background: rgb(72,35,68);
+  }
+  85% {
+    background: rgb(224,33,48);
+  }
+  100% {
+    background: rgb(66,152,103);
+  }
+}
+
+@keyframes color-me-bg {
+  0% {
+    background: rgba(66,152,103,0.1);
+  }
+  25% {
+    background: rgba(250,178,67,0.1);
+  }
+  45% {
+    background: rgba(43,81,102,0.1);
+  }
+  65% {
+    background: rgba(72,35,68,0.1);
+  }
+  85% {
+    background: rgba(224,33,48,0.1);
+  }
+  100% {
+    background: rgba(66,152,103,0.1);
+  }
+}
+
+@keyframes color-me-bg-dark {
+  0% {
+    background: rgba(66,152,103,0.95);
+  }
+  25% {
+    background: rgba(250,178,67,0.95);
+  }
+  45% {
+    background: rgba(43,81,102,0.95);
+  }
+  65% {
+    background: rgba(72,35,68,0.95);
+  }
+  85% {
+    background: rgba(224,33,48,0.95);
+  }
+  100% {
+    background: rgba(66,152,103,0.95);
+  }
+}
+
+

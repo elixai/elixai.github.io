@@ -1,0 +1,115 @@
+.modal-window {
+	position: fixed;
+	background-color: rgba(72,35,68, 0.95);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.75s;
+
+	&:target {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	> div {
+		width: 400px;
+		position: relative;
+		margin: 0 auto;
+		top: 250px;
+		padding: 2rem;
+		background: #fff;
+		color: rgba(0,0,0,0.57);
+	}
+
+	.modal-close {
+		color: #aaa;
+		line-height: 50px;
+		font-size: 80%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		text-align: center;
+		width: 70px;
+		text-decoration: none;
+		transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:hover {
+			color: rgba(0,0,0,0.57);
+		}
+	}
+
+	h2 {
+		font-size: 150%;
+		margin: 15px 0;
+		padding-bottom: 10px;
+		text-align: center;
+		border-bottom: 1px solid rgba(250, 178, 67, 0.27);
+	}
+
+	form {
+		padding: 10px 0;
+		color: rgba(0,0,0,0.57);
+
+		label {
+			font-weight: bold;
+			margin-right: 10px;
+
+			input {
+				margin-right: 5px;
+			}
+		}
+
+		input[type="email"] {
+			width: 100%;
+			padding: 10px;
+			margin: 20px 0 0 0;
+			border: 2px solid rgb(250,178,67);
+			background: transparent;
+			color: rgba(0,0,0,0.27);
+			font-weight: 300;
+			font-size: 1.2em;
+			transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+
+			&:hover {
+				background: rgba(250, 178, 67, 0.27);
+			}
+
+			&:focus,
+			&:active {
+				border-color: rgb(66,152,103);
+				color: rgba(0,0,0,0.57);
+				background: rgba(66,152,103, 0.09);
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		button {
+			display: block;
+			margin-top: 25px;
+			padding: 1em;
+			width: 100%;
+			border: none;
+			background: rgb(250,178,67);
+			color: rgba(255,255,255,0.9);
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: 800;
+			font-size: 1.25em;
+			outline: none;
+			transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+
+			&:focus,
+			&:hover, 
+			&:active {
+				background: rgb(66,152,103);
+			}
+		}
+	}
+}
